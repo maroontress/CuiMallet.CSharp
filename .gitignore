@@ -1,0 +1,11 @@
+.vs/
+Coverlet-html/
+CuiMallet.Test/bin/
+CuiMallet.Test/coverage.opencover.xml
+CuiMallet.Test/dcx/
+CuiMallet.Test/obj/
+CuiMallet/bin/
+CuiMallet/dcx/
+CuiMallet/html/
+CuiMallet/obj/
+*/*.csproj.user

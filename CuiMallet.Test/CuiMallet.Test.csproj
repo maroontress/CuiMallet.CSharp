@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <LangVersion>8.0</LangVersion>
+    <NullableContextOptions>enable</NullableContextOptions>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CodeAnalysisRuleSet>CuiMallet.Test.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CodeAnalysisRuleSet>CuiMallet.Test.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>dcx\CuiMallet.Test.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="dcx\**" />
+    <EmbeddedResource Remove="dcx\**" />
+    <None Remove="dcx\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="StyleChecker.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="StyleChecker.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="2.6.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="ReportGenerator" Version="4.2.9" />
+    <PackageReference Include="StyleChecker" Version="1.0.24" PrivateAssets="all" />
+    <PackageReference Include="StyleChecker.Annotations" Version="1.0.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CuiMallet\CuiMallet.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CuiMallet", "CuiMallet\CuiMallet.csproj", "{C1CDCA95-0DF5-42F7-87D9-2A5E03BA0EA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CuiMallet.Test", "CuiMallet.Test\CuiMallet.Test.csproj", "{956465B2-F4CB-4314-A5D5-77DEA73E6E3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1CDCA95-0DF5-42F7-87D9-2A5E03BA0EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1CDCA95-0DF5-42F7-87D9-2A5E03BA0EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1CDCA95-0DF5-42F7-87D9-2A5E03BA0EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1CDCA95-0DF5-42F7-87D9-2A5E03BA0EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{956465B2-F4CB-4314-A5D5-77DEA73E6E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956465B2-F4CB-4314-A5D5-77DEA73E6E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956465B2-F4CB-4314-A5D5-77DEA73E6E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956465B2-F4CB-4314-A5D5-77DEA73E6E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EF0F821-AAC1-47B2-88BB-F3C4D43DA62A}
+	EndGlobalSection
+EndGlobal
