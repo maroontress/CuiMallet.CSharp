@@ -2,19 +2,34 @@ version: 2
 jobs:
   build:
     docker:
-      - image: mcr.microsoft.com/dotnet/core/sdk:2.2.300
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1.300
     steps:
-      - run: curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-      - run: apt-get install git-lfs
+      - run:
+          name: Install Git LFS
+          command: |
+            curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+            apt-get install git-lfs
       - checkout
       - run: pwd
       - run: dotnet restore
-      - run: dotnet tool install -g BomSweeper.GlobalTool
-      - run: /root/.dotnet/tools/bomsweeper '**/*.cs' '**/*.csproj' '**/*.sln'
-      - run: dotnet build
-      - run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --no-build CuiMallet.Test
-      - run: dotnet tool install -g dotnet-reportgenerator-globaltool
-      - run: /root/.dotnet/tools/reportgenerator --reports:CuiMallet.Test/coverage.opencover.xml --targetdir:Coverlet-html
+      - run:
+          name: Check BOM
+          command: |
+            dotnet tool install -g BomSweeper.GlobalTool
+            /root/.dotnet/tools/bomsweeper '**/*.cs' '**/*.csproj' '**/*.sln'
+      - run:
+          name: Build
+          command: |
+            dotnet build
+      - run:
+          name: Test
+          command: |
+            dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --no-build CuiMallet.Test
+      - run:
+          name: Coverage
+          command: |
+            dotnet tool install -g dotnet-reportgenerator-globaltool
+            /root/.dotnet/tools/reportgenerator --reports:CuiMallet.Test/coverage.opencover.xml --targetdir:Coverlet-html
       - store_artifacts:
           path: /root/project/Coverlet-html
 workflows:

@@ -5,7 +5,8 @@
     <RootNamespace>Maroontress.CuiMallet</RootNamespace>
     <AssemblyName>Maroontress.CuiMallet</AssemblyName>
     <LangVersion>8.0</LangVersion>
-    <NullableContextOptions>enable</NullableContextOptions>
+    <Nullable>enable</Nullable>
+    <DocumentationFile>dcx\CuiMallet.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -25,15 +26,6 @@
     <Company>Maroontress Fast Software</Company>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <CodeAnalysisRuleSet>CuiMallet.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <CodeAnalysisRuleSet>CuiMallet.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>dcx\CuiMallet.xml</DocumentationFile>
-  </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="dcx\**" />
     <EmbeddedResource Remove="dcx\**" />
@@ -51,10 +43,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleChecker" Version="1.0.24" PrivateAssets="all" />
+    <PackageReference Include="StyleChecker" Version="1.0.25" PrivateAssets="all" />
     <PackageReference Include="StyleChecker.Annotations" Version="1.0.1" />
-    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.164" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
