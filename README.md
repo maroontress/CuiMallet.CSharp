@@ -455,8 +455,8 @@ option '--count=abc': the value 'abc' is invalid for NUM
 
 ### Requirements to build
 
-- Visual Studio 2019 Version 16.1
-  or [.NET Core 2.2 SDK (SDK 2.2.300)][dotnet-core-sdk]
+- Visual Studio 2019 Version 16.5
+  or [.NET Core 3.1 SDK (SDK 3.1.300)][dotnet-core-sdk]
 
 ### How to get started
 
@@ -516,6 +516,6 @@ dotnet ANYWHERE/reportgenerator.dll \
 [github-cuimallet-csharp]:
   https://github.com/maroontress/CuiMallet.CSharp
 [dotnet-core-sdk]:
-  https://dotnet.microsoft.com/download/dotnet-core/2.2
+  https://dotnet.microsoft.com/download/dotnet-core/3.1
 [apiref-maroontress.cui]:
   https://maroontress.github.io/CuiMallet-CSharp/api/latest/html/Maroontress.Cui.html

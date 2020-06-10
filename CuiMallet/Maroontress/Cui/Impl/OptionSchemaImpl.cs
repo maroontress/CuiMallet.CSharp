@@ -289,7 +289,7 @@ namespace Maroontress.Cui.Impl
         {
             var kit = new ParseKit(this, s);
             var n = s.IndexOf('=');
-            (var name, string? value) = (n < 0)
+            (var name, var value) = (n < 0)
                 ? (s.Substring(2), null)
                 : (s.Substring(2, n - 2), s.Substring(n + 1));
 
