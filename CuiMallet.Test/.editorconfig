@@ -1,3 +1,6 @@
+[*]
+charset = utf-8
+
 [*.cs]
 
 # SA1600: Elements should be documented
@@ -11,3 +14,6 @@ dotnet_diagnostic.SA1633.severity = none
 
 # SA1513: Closing brace should be followed by blank line
 dotnet_diagnostic.SA1513.severity = none
+
+# SA1118: Parameter should not span multiple lines
+dotnet_diagnostic.SA1118.severity = none

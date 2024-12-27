@@ -1,7 +1,7 @@
 # CuiMallet.CSharp
 
 The CuiMallet is a .NET library for making Command Line Interface.
-It depends on .NET Standard 2.0.
+It depends on .NET Standard 2.1.
 
 ## Get started
 
@@ -455,26 +455,26 @@ option '--count=abc': the value 'abc' is invalid for NUM
 
 ### Requirements to build
 
-- Visual Studio 2019 Version 16.5
-  or [.NET Core 3.1 SDK (SDK 3.1.300)][dotnet-core-sdk]
+- Visual Studio 2022 Version 17.12 or [.NET 9.0 SDK (SDK 9.0.101)][dotnet-sdk]
 
 ### How to get started
 
 ```plaintext
 git clone URL
-cd Cui
-dotnet restore
-dotnet build
+cd CuiMallet.CSharp
+dotnet build --configuration Release
 ```
 
 ### How to get test coverage report with Coverlet
 
 ```plaintext
-dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover \
-        --no-build CuiMallet.Test
-dotnet ANYWHERE/reportgenerator.dll \
-        --reports:CuiMallet.Test/coverage.opencover.xml \
-        --targetdir:Coverlet-html
+dotnet tool install -g dotnet-reportgenerator-globaltool
+dotnet test --configuration Release --no-build \
+  --logger "console;verbosity=detailed" \
+  --collect:"XPlat Code Coverage" \
+  --results-directory MsTestResults
+reportgenerator -reports:MsTestResults/*/coverage.cobertura.xml \
+  -targetdir:Coverlet-html
 ```
 
 ## References
@@ -515,7 +515,7 @@ dotnet ANYWHERE/reportgenerator.dll \
   https://maroontress.github.io/images/GitHub-logo.png
 [github-cuimallet-csharp]:
   https://github.com/maroontress/CuiMallet.CSharp
-[dotnet-core-sdk]:
-  https://dotnet.microsoft.com/download/dotnet-core/3.1
+[dotnet-sdk]:
+  https://dotnet.microsoft.com/en-us/download/dotnet/9.0
 [apiref-maroontress.cui]:
   https://maroontress.github.io/CuiMallet-CSharp/api/latest/html/Maroontress.Cui.html

@@ -1,3 +1,6 @@
+[*]
+charset = utf-8
+
 [*.cs]
 
 # SA1600: Elements should be documented
@@ -14,3 +17,6 @@ dotnet_diagnostic.SA1302.severity = none
 
 # SA1101: Prefix local calls with this
 dotnet_diagnostic.SA1101.severity = none
+
+# SA1010: Opening square brackets should be spaced correctly
+dotnet_diagnostic.SA1010.severity = none
